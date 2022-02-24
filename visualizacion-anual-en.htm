@@ -1,0 +1,103 @@
+<?php
+include_once '../portal/class/general.php';
+include       'config.php';
+
+$titulo = "Campsite Occupancy Survey";
+$tipo = PRODUCTO_NUEVA;
+$responsive = TRUE;
+$tableau = TRUE;
+$descripcion = "ááñññ";
+$charset = "utf-8";
+
+$masestilos="
+<style>
+#panel1{
+  height:3500px;
+  border-bottom:0px solid #ccc;
+  margin-bottom:1em;
+}
+#panel1m{
+  height:6000px;
+  border-bottom:0px solid #ccc;
+  margin-bottom:1em;
+}
+</style>
+";
+
+include 'cabecera.php';
+?>
+
+<section id='intro'>
+		<div id='titulo'>
+			<h1>Campsite Occupancy Survey - Visualization of Annual Data</h1>
+		</div>
+		<img src="../portal/images/images/andaluciasemueveconeuropa.png" alt="Andalucía se mueve con Europa" class="andaluciaSeMueve">	
+	</section>
+
+	<section id='enlacesTemas'>
+		
+		<p align="center"><a href='index-en.htm'>[Product page]</a></p>
+		
+		<section class='tableau'>
+			<div id="panel1" class="tab-2panel-desktop" ></div>
+			<div id="panel1m" class="tab-2panel-mobile" ></div>
+		</section>		
+		
+		<article class='bloque-tema'>
+			<div>
+				<p>Notes:</p>
+				<ul>
+					<li>The symbol "-" is interpreted as that in the survey there has been no case for that certain category or because it is not very significant.</li>
+				</ul>
+				<img class="ico-feder" src="../../portal/images/icons/Logo_UE_FEDER.gif" alt="Fondos">
+			</div>			
+		</article>
+	</section>
+	
+<script type="text/javascript">
+		
+		var options ={
+			hideTabs: true,
+			hideToolbar: true,
+			width:'100%',
+			height:'100%',
+			showShareOptions:false
+		};
+
+		$.ajax({
+				type: "POST",
+				url: "tableau_trusted.php",
+				data: { user: 'tableauadm', server: 'tableausrv.ieca.junta-andalucia.es' 
+			}, 
+			success: function(response) {
+				var incomingTicket = response;
+				var tab1 = document.getElementById("panel1"); 
+				var url1 = "https://ws089.juntadeandalucia.es/trusted/"+ incomingTicket +"/views/CampingsAnual/DashboardAnual?:origin=card_share_link&:embed=n";
+				var viz1 = new tableau.Viz(tab1, url1, options);
+			},
+			error: function(xhr, status, error){
+				console.log(error);
+			}
+		});
+		
+		/* ------ mobile ------ */
+		
+		$.ajax({
+				type: "POST",
+				url: "tableau_trusted.php",
+				data: { user: 'tableauadm', server: 'tableausrv.ieca.junta-andalucia.es' 
+			}, 
+			success: function(response) {
+				var incomingTicket = response;
+				var tab1m = document.getElementById("panel1m"); 
+				var url1m = "https://ws089.juntadeandalucia.es/trusted/"+ incomingTicket +"/views/CampingsAnual/MovilDashboardAnual?:origin=card_share_link&:embed=n";
+				var viz1m = new tableau.Viz(tab1m, url1m, options);
+			},
+			error: function(xhr, status, error){
+				console.log(error);
+			}
+		});
+		
+</script>
+
+<?php  include 'pie.php'; ?>

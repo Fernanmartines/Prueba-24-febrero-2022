@@ -1,0 +1,184 @@
+<?php
+include_once '../portal/class/general.php';
+include       'config.php';
+
+//$color        = ESTAD;
+$tipo         = PRODUCTO_NUEVA;
+$responsive   = TRUE;
+$tableau      = TRUE;
+$titulo       = "Campsite Occupancy Survey";
+$descripcion  = "";
+
+$masestilos ="
+<style>
+#panel1{
+  height:340px;
+  border-bottom:0px solid #ccc;
+  margin-bottom:1em;
+}
+#panel1m{
+  height:700px;
+  border-bottom:0px solid #ccc;
+  margin-bottom:1em;
+}
+@media screen and (min-width:560px){
+  .bloque_visualiza{
+    width:25%;
+  }
+}
+</style>
+";
+
+include 'cabecera.php';
+?>
+  
+	<section id='intro'>
+		<div id='titulo'>
+			<h1>Campsite Occupancy Survey</h1>
+		</div>
+		<img src="../portal/images/images/andaluciasemueveconeuropa.png" alt="Andalucía se mueve con Europa" class="andaluciaSeMueve">	
+	</section>
+    
+    <section class='tableau'>
+          <div id="panel1" class="tab-2panel-desktop" ></div>
+          <div id="panel1m" class="tab-2panel-mobile" ></div>
+    </section>
+    
+    <section id='enlacesTemas'>
+      
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/interactivos.png" alt="Visualizaciones interactivas">
+			<h2>View data interactively</h2>			
+			<article id='enlacesTemas'>
+				<div class='row'>
+					<div class='bloque_visualiza'>
+						<a href='visualizacion-mensual-en.htm'><h3>Monthly data</h3><img src='graficos/Imagen-Visualizacion-1.png' alt='Monthly Data' /></a>
+					</div>
+					<div class='bloque_visualiza'>
+						<a href='visualizacion-anual-en.htm'><h3>Annual data</h3><img src='graficos/Imagen-Visualizacion-2.png' alt='Annual data' /></a>
+					</div>
+				</div>
+			</article>
+		</article>
+      
+		<!--<article  class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/prensa.png" alt="Informative note">
+			<h2>Informative note</h2><br>
+				<ul>
+					<li><a href="notaprensa.htm">Informative note</a></li>
+				</ul>
+		</article>-->
+      
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/datos.png" alt="Data series and download">
+			<h2>Data series and download</h2><br>
+				<ul>
+					<li>Monthly Data: <a href="https://www.juntadeandalucia.es/institutodeestadisticaycartografia/badea/informe/datosaldia?CodOper=b3_651&idNode=8406">December 2021</a> (since January 2007)</li>
+					<li>Annual data: <a href="https://www.juntadeandalucia.es/institutodeestadisticaycartografia/badea/informe/anual?CodOper=b3_651&idNode=7567">2021 (provisional data)</a> (since 2007)</li>
+				</ul>
+			<p>To access data from previous periods you must use the <em>filter</em> option of the data tables.</p>
+		</article>
+      
+		<!--<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/descargas.png" alt="Microdatos">
+			<h2>Microdatos</h2><br>
+				<ul>
+					<li><a href="/descarga/mercado_trabajo/formacion-profesional.htm">Microdatos</a></li>
+				</ul>
+		</article>-->
+      
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/actualizaciones.png" alt="Updates">
+			<h2>Updates</h2><br>
+				<ul>
+					<li>Date of last update: 09/02/2022</li>
+					<li><a href="actualizaciones-en.htm">Update log</a></li>
+				</ul>
+		</article>
+      
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/territorio.png" alt="Territorial scope">
+			<h2>Territorial scope</h2><br>
+				<ul>
+					<li>Andalusia, provinces, tourist areas, tourist points and tourist parks.</li>
+				</ul>
+		</article>
+      
+		<article class='bloque-tema'>		
+			<img class='icono' src="../../portal/images/pproducto/metodologia.png" alt="Methodological documents">
+			<h2>Methodological documents</h2><br>
+				<ul>
+					<li><a href="metodologia/MT050904.pdf">Technical report</a></li>
+					<li><a href="metodologia/IME050904.pdf">Standardized methodological report</a></li>
+					<li><a href="metodologia/IC050904.pdf">Quality indicator</a></li>
+				</ul>
+		</article>	
+      
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/mas_actividades.png" alt="Related publications and activities">
+			<h2>Related publications and activities</h2><br>
+				<ul>
+					<li><a href='../eoh/index-eoh-en.htm'>Hotel Occupancy Survey</a></li>
+					<li><a href='../eotr/index-en.htm'>Rural Tourism Accommodation Occupancy Survey</a></li>
+					<li><a href='../eoap/index-en.htm'>Tourist Apartments Occupancy Survey</a></li>
+					<li><a href='../turismo/index-en.htm'>Andalusian Tourism Situation Survey</a></li>
+				</ul>
+		</article>
+      
+		<article class='bloque-tema saber-mas'>
+			<h2>Know more...</h2><br>
+			<p>Campsite Occupancy Survey is a monthly situation report that collects information on the supply and demand for tourist campsites in Andalusia. The main variables studied are: the category of the campsite, travellers lodged, sites occupied (or overnight stays), campsite capacity, staff employed, occupancy level, average stay, country and region of residence.</p>
+			<div>
+				<img class="ico-feder" src="../../portal/images/icons/Logo_UE_FEDER.gif" alt="Fondos">
+			</div>
+		</article>
+      
+	</section>	
+
+	 
+<script type="text/javascript">
+		
+		var options ={
+			hideTabs: true,
+			hideToolbar: true,
+			width:'100%',
+			height:'100%',
+			showShareOptions:false
+		};
+
+		$.ajax({
+				type: "POST",
+				url: "tableau_trusted.php",
+				data: { user: 'tableauadm', server: 'tableausrv.ieca.junta-andalucia.es' 
+			}, 
+			success: function(response) {
+				var incomingTicket1 = response;
+				var tab1 = document.getElementById("panel1"); 
+				var url1 = "https://ws089.juntadeandalucia.es/trusted/"+ incomingTicket1 +"/views/CampingsMensual/DashboardPaginaProducto?:origin=card_share_link&:embed=n";
+				var viz1 = new tableau.Viz(tab1, url1, options);
+			},
+			error: function(xhr, status, error){
+				console.log(error);
+			}
+		});
+
+		/* ------ mobile ------ */
+		$.ajax({
+				type: "POST",
+				url: "tableau_trusted.php",
+				data: { user: 'tableauadm', server: 'tableausrv.ieca.junta-andalucia.es' 
+			}, 
+			success: function(response) {
+				var incomingTicket2 = response;
+				var tab1m = document.getElementById("panel1m"); 
+				var url1m = "https://ws089.juntadeandalucia.es/trusted/"+ incomingTicket2 +"/views/CampingsMensual/MovilDashboardPaginaProducto?:origin=card_share_link&:embed=n";
+				var viz1m = new tableau.Viz(tab1m, url1m, options);
+			},
+			error: function(xhr, status, error){
+				console.log(error);
+			}
+		});
+		
+</script>
+
+<?php  include 'pie.php'; ?>

@@ -1,0 +1,161 @@
+<?php
+include_once '../portal/class/general.php';
+include       'config.php';
+
+//$color        = ESTAD;
+$tipo         = PRODUCTO_NUEVA;
+$responsive   = TRUE;
+$tableau      = TRUE;
+$titulo       = "Campsite Occupancy Survey";
+$descripcion = "ááñññ";
+$charset = "utf-8";
+
+include 'cabecera.php';
+?>
+
+	<section id='intro'>
+      <div id='titulo'>
+        <h1>Campsite Occupancy Survey</h1>
+			</div>
+      <img src="../portal/images/images/andaluciasemueveconeuropa.png" alt="Andalucía se mueve con Europa" class="andaluciaSeMueve">	
+    </section>
+	
+	<article class='bloque-tema'>
+		<div class='centrar no_imprimir'>
+			<a href='index-en.htm'>[Product page]</a>
+		</div>
+	</article>	
+
+	<section id='enlacesTemas'>
+				
+		<article class='bloque-tema'>
+			<img class='icono' src="../../portal/images/pproducto/actualizaciones.png" alt="Updates">
+			<h2>Update log</h2><br>
+			<ul>
+				<li><strong>Next Update: 4 March 2022 </strong> (<a href='../ieagen/calendario/index-en.htm'>see publications calendar</a>)</li>
+				
+				<li>9 February 2022. Published year 2021. Provisional data</li>
+				<li>3 February 2022. Published December 2021. Interactive visualizations of monthly and annual data are published</li>
+				<li>5 January 2022. Published November 2021</li>
+				<li>3 December 2021. Published Octobre 2021</li>
+				<li>3 November 2021. Published September 2021</li>
+				<li>15 October 2021. Published definitive data for 2020</li>
+				<li>5 October 2021. Published August 2021</li>
+				<li>2 September 2021. Published July 2021</li>
+				<li>3 August 2021. Published June 2021</li>
+				<li>5 July 2021. Published May 2021</li>
+				<li>2 June 2021. Published April 2021</li>
+				<li>6 May 2021. Published March 2021</li>
+				<li>6 April 2021. Published February 2021</li>
+				<li>5 March 2021. Published January 2021</li>
+				<li>18 February 2021. Published year 2020. Provisional data</li>
+				<li>1 February 2021. Published December 2020</li>
+				<li>5 January 2021. Published November 2020</li>
+				<li>3 December 2020. Published October 2020</li>
+				<li>3 November 2020. Published September 2020</li>
+				<li>5 October 2020. Published August 2020</li>
+				<li>30 September 2020. Published definitive data for 2019</li>
+				<li>2 September 2020. Published July 2020</li>
+				<li>3 August 2020. Published June 2020</li>
+				<li>3 July 2020. Published May 2020</li>
+				<li>2 June 2020. Published April 2020</li>
+				<li>6 May 2020. Published March 2020</li>
+				<li>3 April 2020. Published February 2020</li>
+				<li>3 March 2020. Published January 2020</li>
+				<li>17 February 2020. Published year 2019. Provisional data</li>
+				<li>3 February 2020. Published December 2019</li>
+				<li>3 January 2020. Published November 2019</li>
+				<li>3 December 2019. Published October 2019</li>
+				<li>5 November 2019. Published September 2019</li>
+				<li>4 October 2019. Published definitive data for 2018</li>
+				<li>1 October 2019. Published August 2019</li>
+				<li>3 September 2019. Published July 2019</li>
+				<li>2 August 2019. Published June 2019</li>
+				<li>3 July 2019. Published May 2019</li>
+				<li>4 June 2019. Published April 2019</li>
+				<li>13 May 2019. Published March 2019</li>
+				<li>3 April 2019. Published February 2019</li>
+				<li>5 March 2019. Published January 2019</li>
+				<li>19 February 2019. Published provisional data for 2018</li>
+				<li>4 February 2019. Published December 2018</li>
+				<li>8 January 2019. Published November 2018</li>
+				<li>4 December 2018. Published October 2018</li>
+				<li>6 November 2018. Published September 2018</li>
+				<li>1 October 2018. Published August 2018</li>
+				<li>25 September 2018. Published definitive data for 2017</li>
+				<li>4 September 2018. Published July 2018</li>
+				<li>2 August 2018. Published June 2018</li>
+				<li>3 July 2018. Published May 2018</li>
+				<li>5 June 2018. Published April 2018</li>
+				<li>7 May 2018. Published March 2018</li>
+				<li>4 April 2018. Published February 2018</li>
+				<li>16 March 2018. Published provisional data for 2017</li>
+				<li>6 March 2018. Published January 2018</li>
+				<li>2 February 2018. Published December 2017</li>
+				<li>4 January 2018. Published November 2017</li>
+				<li>4 December 2017. Published October 2017</li>
+				<li>3 November 2017. Published September 2017</li>
+				<li>3 October 2017. Published August 2017</li>
+				<li>6 September 2017. Published July 2017</li>
+				<li>10 August 2017. Published definitive data for 2016</li>
+				<li>2 August 2017. Published June 2017</li>
+				<li>5 July 2017. Published May 2017</li>
+				<li>5 June 2017. Published April 2017</li>
+				<li>4 May 2017. Published March 2017</li>
+				<li>4 April 2017. Published February 2017</li>
+				<li>6 March 2017. Published January 2017</li>
+				<li>9 February 2017. Published data for 2016</li>
+				<li>2 February 2017. Published December 2016</li>
+				<li>9 January 2017. Published November 2016</li>
+				<li>2 December 2016. Published October 2016</li>
+				<li>4 November 2016. Published September 2016</li>
+				<li>5 October 2016. Published August 2016</li>
+				<li>5 September 2016. Published July 2016</li>
+				<li>4 August 2016. Published June 2016</li>
+				<li>2 August 2016. Published definitive data for 2015</li>
+				<li>5 July 2016. Published May 2016</li>
+				<li>7 June 2016. Published April 2016</li>
+				<li>4 May 2016. Published March 2016</li>
+				<li>8 April 2016. Published February 2016</li>
+				<li>4 March 2016. Published January 2016</li>
+				<li>12 February 2016. Published December 2015</li>
+				<li>8 January 2016. Published November 2015</li>
+				<li>2 December 2015. Published October 2015</li>
+				<li>4 November 2015. Published September 2015</li>
+				<li>5 October 2015. Published August 2015</li>
+				<li>21 September 2015. Published definitive data for 2014</li>
+				<li>3 September 2015. Published July 2015</li>
+				<li>5 August 2015. Published June 2015</li>
+				<li>3 July 2015. Published May 2015</li>
+				<li>3 June 2015. Published April 2015</li>
+				<li>5 May 2015. Published March 2015</li>
+				<li>7 April 2015. Published February 2015</li>
+				<li>24 March 2015. Published data for 2014</li>
+				<li>6 March 2015. Published January 2015</li>
+				<li>4 February 2015. Published December 2014</li>
+				<li>7 January 2015. Published November 2014</li>
+				<li>3 December 2014. Published October 2014</li>
+				<li>5 November 2014. Published September 2014</li>	
+				<li>3 October 2014. Published August 2014</li>	
+				<li>3 September 2014. Published July 2014</li>			
+				<li>5 August 2014. Published June 2014</li>
+				<li>23 July 2014. Published definitive data for 2013</li>
+				<li>3 July 2014. Published May 2014</li>
+				<li>5 June 2014. Published April 2014</li>
+				<li>5 May 2014. Published March 2014</li>
+				<li>3 April 2014. Published February 2014</li>
+				<li>6 March 2014. Published January 2014</li>
+				<li>5 February 2014. Published December 2013</li>
+				<li>8 January 2014. Published November 2013</li>				
+			</ul>
+		</article>
+
+		<article class='bloque-tema'>
+			<div>
+				<img class="ico-feder" src="../../portal/images/icons/Logo_UE_FEDER.gif" alt="Fondos">
+			</div>
+		</article>	
+
+	</section>
+	 
+<?php  include 'pie.php'; ?>
